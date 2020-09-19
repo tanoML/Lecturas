@@ -1,0 +1,179 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+  }
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+  }
+
+  /* Enter and leave animations can use different */
+/* durations and timing functions.              */
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+.bounce-enter-active {
+  animation: bounce-in .5s;
+}
+.bounce-leave-active {
+  animation: bounce-in .5s reverse;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+//here we start to design the principal page
+
+
+.navbar {
+  a{
+    text-transform: uppercase;
+  }
+}
+
+.general {
+  background-color: rgba(3, 22, 26, 1);
+
+   //position: absolute;
+   //bottom: 0;
+   
+  p{
+    text-transform: uppercase;
+    color: white;
+    font-size: 12px;
+    margin: 1rem 1rem;
+
+    @include media(xs){
+      font-size: 9px;
+    }
+
+    @include media(md){
+      font-size: 10px;
+    }
+
+    // @include media(lg){
+    //   font-size: 9px;
+    // }
+  }
+
+  .col{
+    text-align: center;
+  }
+
+  @include media(sm){
+    //position: absolute;
+    //bottom: 0;
+    //width: 100%;
+    background-color: red;
+   
+  }
+
+  @include media(md){
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    
+  }
+
+  @include media(lg){
+   // position: absolute;
+    //bottom: 0;
+    width: 100%;
+  }
+
+}
+
+.beforeFooter{
+  background-color: rgba(3, 22, 26, 0.9);
+  //padding: 20px 20px;
+  border-top-left-radius: 20rem;
+  border-top-right-radius: 20rem;
+  padding: 0rem;
+  
+  // @include media(md){
+  //   position: absolute;
+  //   bottom: 0;
+  //   width: 100%;
+  // }
+
+  @include media(lg){
+    //position: absolute;
+    bottom: 50px;
+    width: 100%;
+  }
+
+  .container{
+    p{
+      text-transform: uppercase;
+      font-size: 13px;
+      color: white;
+     @include media(xs){
+       font-size: 10px;
+     }
+     @include media(lg){
+      font-size: 12px;
+    }
+
+
+    }
+
+    a{
+      text-transform: uppercase;
+      @include media(xs){
+        font-size: 10px;
+      }
+      @include media(lg){
+        font-size: 12px;
+      }
+
+    }
+
+    ul{
+      list-style: none;
+    }
+  }
+
+}
+
+.navbarResponsable
+{
+  background-color: rgba(0,0,0,0.7);
+}
+
+// .navbarResponsable a{
+//   color: rgba(255,255,255,1);
+// }
+
+
+// .navbarResponsable a:hover{
+//   color: rgba(0,0,0,1);
+// }
+
+.navbarResponsable:hover{
+  background-color: rgba(0,169,172,0.8); //rgba(0,60,61,0.5);
+}
